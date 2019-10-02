@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Copyright (C) 2012-2015 Adrian Ulrich <adrian@blinkenlights.ch>
+Copyright (C) 2012 Christopher Eby <kreed@kreed.org>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.dragonide.maxmusic"
+    android:installLocation="auto"
+    android:versionCode="26"
+
+    android:versionName="3.51">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- This is needed for isWiredHeadsetOn() to work in some cases. (bug?) -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="MaxMusic">
+
+        <meta-data
+
+            android:name="com.mirrorlink.android.rockscout.allow-offline-access"
+            android:value="true" />
+
+
+        <activity
+            android:name=".EditDetails"
+            android:parentActivityName=".FullPlaybackActivity" />
+        <activity
+            android:name="FullPlaybackActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".LibraryActivity" />
+        <activity android:name=".MaxMusicEqualizer" />
+        <activity
+            android:name="LibraryActivity"
+
+            android:launchMode="singleTask">
+            <intent-filter>
+
+
+                <category android:name="android.intent.category.APP_MUSIC" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="PlaylistActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="MiniPlaybackActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance" />
+        <activity android:name="PreferencesActivity" />
+
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="TabOrderActivity" />
+        <activity android:name="FilebrowserStartActivity" />
+        <activity android:name="PermissionRequestActivity" />
+
+        <activity
+            android:name="AudioPickerActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/PopupDialog_Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/x-flac" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+                <data android:host="media" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/x-flac" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AlbumArtDialog"
+
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".MusicPicker"
+            android:exported="true">
+
+            <!--
+                 First way to invoke us: someone asks to get content of
+                 any of the audio types we support.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+            </intent-filter>
+            <!--
+                 Second way to invoke us: someone asks to pick an item from
+                 some media Uri.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="vnd.android.cursor.dir/audio" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".OneCellWidget"
+            android:label="MaxMusic 1x1">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/one_cell_widget" />
+        </receiver>
+        <receiver
+            android:name=".FourLongWidget"
+            android:label="MaxMusic 4x1 A">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/four_long_widget" />
+        </receiver>
+        <receiver
+            android:name=".FourWhiteWidget"
+            android:label="MaxMusic 4x1 White">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/four_white_widget" />
+        </receiver>
+        <receiver
+            android:name=".WidgetE"
+            android:label="MaxMusic 4x1 B">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_e" />
+        </receiver>
+        <receiver
+            android:name=".FourSquareWidget"
+            android:label="MaxMusic 2x2 A">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/four_square_widget" />
+        </receiver>
+        <receiver
+            android:name=".WidgetD"
+            android:label="MaxMusic 2x2 B">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_d" />
+        </receiver>
+        <receiver android:name="MediaButtonReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="PlaybackService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.dragonide.maxmusic.action.PLAY" />
+                <action android:name="com.dragonide.maxmusic.action.PAUSE" />
+                <action android:name="com.dragonide.maxmusic.action.TOGGLE_PLAYBACK" />
+                <action android:name="com.dragonide.maxmusic.action.NEXT_SONG" />
+                <action android:name="com.dragonide.maxmusic.action.PREVIOUS_SONG" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".MirrorLinkMediaBrowserService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".SomeClass" />
+        <activity
+            android:name=".RingdroidEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="@string/edit_intent">
+                <action android:name="android.intent.action.EDIT" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity for choosing a contact to assign a ringtone to. -->
+        <activity
+            android:name=".ChooseContactActivity"
+            android:configChanges="orientation|keyboardHidden"></activity>
+
+    </application>
+</manifest>

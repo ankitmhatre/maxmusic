@@ -1,0 +1,826 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        body { font-family: sans-serif; background: #00bff3;}
+        pre { background-color: #ccc; color: #000; padding: 1em; white-space: pre-wrap; display:
+        none; }
+        h2 { border-bottom: 1px solid #444; }
+        a { color: #5c5cff; }
+    </style>
+    <script>
+function show(n) {
+	var e = document.getElementById(n);
+	if (e.style.display == "block") {
+		e.style.display="none";
+	} else {
+		e.style.display="block";
+	}
+}
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<h1>Vanilla Music[<a href='javascript:show("edssd")'>show</a>]</h1>
+<pre id='edssd'>
+<p><b>Version:</b> 1.0.41 Released Jun. 8, 2016<br><br>
+    <b>Website:</b> <a href='http://MaxMusic.io'>http://MaxMusic.io</a><br>
+    <b>Issue tracker:</b> <a href='https://github.com/vanilla-music/vanilla/issues'>https://github.com/vanilla-music/vanilla/issues</a><br>
+    <b>Community &amp; support:</b> <a
+            href='https://www.reddit.com/r/MaxMusic'>/r/MaxMusic</a><br>
+    <b>Nightly Build:</b> <a
+            href='http://android.eqmx.net/android/vanilla/MaxMusic-nightly.apk'>MaxMusic-nightly.apk</a><br>
+    <br>
+<h2>Contributors For Vanilla</h2>
+<ul>
+    <li>Adrian Ulrich (current maintainer)</li>
+    <li>Amin Bandali (current maintainer)</li>
+    <li>Andrew Nayenko (Icon)</li>
+    <li>Chris Eby (original creator)</li>
+    <li>David Beswick (various contributions)</li>
+    <li>Emir Sar&#305; (Turkish translation)</li>
+    <li>Ferenc Nagy (icon)</li>
+    <li>Jean-Baptiste Lab (notication color invert)</li>
+    <li>Jean-Fran&ccedil;ois Im (cover art loading)</li>
+    <li>Jerry Liao (Chinese (Taiwan) translation)</li>
+    <li>Jiri Gr&ouml;nroos (Finnish translation)</li>
+    <li>Jeremy Erickson (SD-Scanner code)</li>
+    <li>Magnus Anderssen (headset button)</li>
+    <li>Mildred Ki'Lya (stop after track mode)</li>
+    <li>Oleg (Adonai) Chernovskiy (fastscroll)</li>
+    <li>Rosario Antoci (Italian translation)</li>
+    <li>Xiao Bao Clark (various contributions)</li>
+    <!-- TODO: add more translators -->
+</ul>
+
+</pre>
+<h2>Licenses</h2>
+<h3>Vanilla Music [<a href='javascript:show("l1")'>show</a>]</h3>
+<pre id='l1'>
+Copyright (C) 2012-2015 Vanilla Music contributors
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+</pre>
+
+<h3>Vanilla Music includes code released under the <a href='javascript:show("l2")'>MIT License</a>
+</h3>
+<pre id='l2'>
+Copyright (C) 2012-2013 Vanilla Music contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</pre>
+
+<h3>DragSortListView [<a href='javascript:show("l4")'>show</a>]</h3>
+<pre id='l4'>
+A subclass of the Android ListView component that enables drag
+and drop re-ordering of list items.
+
+Copyright 2012 Carl Bauer
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre>
+<h3>Android Support Libraries[<a
+        href='javascript:show("l65")'>show</a>]</h3>
+<pre id='l65'>
+Copyright (C) 2011 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre>
+
+<h3>License [<a href='javascript:show("l5")'>show</a>]</h3>
+<pre id='l5'>
+Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright {yyyy} {name of copyright owner}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre>
+<h3>Last.fm[<a href='javascript:show("df44r")'>show</a>]</h3>
+<pre id='df44r'>
+1. Definitions
+
+    "API" means the application programming interface that supports requests for web services made of it by computer programs
+    "Data storage" means any database, spreadsheet, chart, physical document, server, network, or other means of storing information, whether created or distributed by You or otherwise.
+    "Last.fm Data" means any data, images, text, content or other information or materials made available to You by Last.fm through the API.
+    "Last.fm Site" means Last.fm's website and all related properties, the url of which is located at www.last.fm.
+    "Term" shall mean the duration of this Agreement which shall start on the date that Last.fm provides you with an API key pursuant to Clause 2.6 (evidenced by Last.fm's server logs) and shall continue unless and until terminated in accordance with Clause 9.
+    "User(s)" means a user of the Last.fm Site.
+
+2. Conditions of Use
+2.1
+
+Your access to and use of the API and the Last.fm Data is subject to the terms of this Agreement, the Last.fm Site Terms of Use as posted on the Last.fm Site at http://www.last.fm/legal/terms and updated from time to time and the Last.fm Privacy Policy as posted on the Last.fm Site at http://www.last.fm/legal/privacy and updated from time to time, each of which is incorporated into this Agreement by reference. If Last.fm has granted you permission to use the API and Last.fm Data for commercial purposes in accordance with the Commercial Use Terms, such Commercial Use Terms shall also form part of this Agreement. For more information about how to apply to use the API and Last.fm Data for commercial purposes, please contact us via email at partners [at] last [dot] fm.
+2.2
+
+You must be a registered User to have access to, retrieve and use the Last.fm Data.
+2.3
+
+You may access, retrieve, store and use any Last.fm Data in accordance with the laws relating to the storage and processing of data in the country in which You live, provided that if You live in a country outside the European Economic Area, You may only use and access and use Last.fm data in that country if Users have expressly given their permission for You to do so when they registered as a User.
+2.4
+
+You must at all times in Your use of the Last.fm Data: (i) comply with all local and international laws and regulations, including, all applicable intellectual property and data protection laws; and (ii) obtain all necessary licences and permissions.
+2.5
+
+You must not transmit, export, transfer, divert or send any Last.fm Data to any country without obtaining any consents or authorisations required under law or regulation in such country.
+2.6
+
+You agree to only use Last.fm's web services as documented on the following pages: http://www.audioscrobbler.net/data/webservices/; http://www.last.fm/tools/; http://www.last.fm/api/. Last.fm will provide You with an API key from time to time to access and use the API. You may only use APIs in conjunction with the most recent user authentication key provided to You by Last.fm. You must not gather any other data from Last.fm in any other way.
+2.7
+
+You agree to use one of the buttons saying "powered by AudioScrobbler" from the page located at http://www.last.fm/resources, such button linking back to Last.fm. All links to Last.fm from pages with profile information for a Last.fm User account should link to the appropriate Last.fm User page (example: http://www.last.fm/user/{username}). All links to Last.fm from pages displaying information on an artist, album or track should link to the appropriate catalogue page on Last.fm. For example: http://www.last.fm/music/{artistname}, http://www.last.fm/music/{artistname}/{albumname}, http://www.last.fm/music/{artistname}/_/{trackname}.
+
+	All button/link placements are subject to approval by Last.fm and Last.fm can suggest the use of a button/link of its choice for You to use if Last.fm deems necessary. You agree to only give public access to pages using Last.fm's web services that have been previously approved by Last.fm in writing.
+	2.8
+
+	You agree to implement and comply with standards of privacy and confidentiality for the use and sharing of any Last.fm Data or any product thereof that are, as a minimum, as stringent as the standards set out in the Last.fm Privacy Policy as amended and updated by Last.fm from time to time.
+	2.9
+
+	Last.fm may use technical measures to track Your use of the Last.fm Data for the purpose of ensuring compliance with this Agreement.
+	3. Use of the API and Last.fm Data
+	3.1
+
+	You are permitted to use the Last.fm Data solely for non-commercial purposes and for no other purpose and subject always to any limitations or conditions as advised to You by Last.fm at any time. If you are unsure whether your use of the Last.fm Data constitutes non-commercial or commercial use, you should contact us.
+	3.2
+
+	The permission granted to You at Clause 3.1 is strictly conditional upon Your using the Last.fm Data for non-commercial purposes, as set out above. If at any time you wish to use the Last.fm Data for commercial purposes, you must apply for a commercial use agreement. Any use by You of the Last.fm Data for commercial purposes without obtaining a commercial use agreement constitutes a material breach of this Agreement which shall entitle Last.fm to terminate your use of the Last.fm Data immediately. Any such termination shall be without prejudice to any rights and remedies of Last.fm, including the right to claim for damages against You.
+	4. License to use the Last.fm Data
+	4.1
+
+	Subject to the restrictions set out at Clauses 4.2 and 4.3 below and in consideration of the licence granted to You below, Last.fm grants to You a worldwide, royalty-free, non-exclusive licence for the duration of copyright and any other rights in the Last.fm Data to: (i) copy the Last.fm Data; (ii) edit, modify, adapt or translate the Last.fm Data in any media to create a derivative work (a "Derivative Work"); (iii) incorporate the Last.fm Data in its entirety in unmodified form along with a number of other separate and independent works, assembled into a collective whole (a "Collective Work"); and (iv) publish, distribute or otherwise communicate the Last.fm Data or the Last.fm Data as incorporated in any Derivative Work or Collective Work to the public in any material form in any media now known.
+	4.2
+
+	The licence granted at Clause 4.1 above is conditional upon You:
+	4.2.1
+
+	Making reference to the licence granted by Last.fm (appropriate to the media used) on all copies of the Last.fm Data, Derivative Works and/or Collective Works published, distributed or otherwise communicated or made available to the public by You;
+	4.2.2
+	Crediting Last.fm in the form set out in Clause 2.7 where You have used Last.fm Data or created a Derivative Work and/or Collective Work that You publish, distribute or otherwise communicate to the public;
+	4.2.3
+	complying with any and all restrictions notified to You by Last.fm in relation to the treatment of any personal data (and for the purposes of this Clause 4.2.3, any changes to Last.fm's Privacy Policy shall automatically constitute notice); and
+	4.2.4
+	to the extent reasonably practicable, keeping intact all notices that refer to the licence granted to You, if any, that Last.fm specifies to be associated with the Last.fm Data, Derivative Works and/or Collective Works.
+	4.3
+	The licence granted to You at Clause 4.1 is subject to the following restrictions:
+	4.3.1
+	You must not impose any terms on the use to be made of the Last.fm Data, a Derivative Work or a Collective Work that alters or restricts the terms of the licence granted to You under this Agreement or which has the effect or intent of restricting the ability to exercise those rights;
+	4.3.2
+	You must not impose or apply any digital rights management technology to or on the Last.fm Data or the Last.fm Data as incorporated in a Derivative Work or Collective Work that alters or restricts the terms of the licence or any rights granted under it, or has the effect or intent of restricting the ability to exercise those rights;
+	4.3.3
+	You must not sub-license the Last.fm Data to a third party; and
+	4.3.4
+	You must not subject the Last.fm Data to any derogatory treatment, including (but not limited to) distortion or mutilation of the Last.fm Data or treatment that is prejudicial (in Last.fm's opinion) to the reputation of Last.fm.
+	4.4
+
+	You will implement suitable caching in accordance with the HTTP headers sent with web service responses. You will not make more than 5 requests per originating IP address per second, averaged over a 5 minute period, without prior written consent. You agree to cache similar artist and any chart data (top tracks, top artists, top albums) for a minimum of one week.
+	4.5
+
+	Notwithstanding the licence at clause 4.1, all rights in and to the Last.fm Data (including all copyright and database rights) remain vested in Last.fm.
+	4.6
+
+	Last.fm may, from time to time, prevent certain Last.fm Data from being available via the API.
+	4.7
+
+	Last.fm respects copyright. You shall not under any circumstances use the Last.fm Data for the purpose of, or in conjunction with, the unauthorised exploitation of intellectual property or for any other purpose which encourages, supports or is in any way associated with unauthorised exploitation.
+	5. Warranties and Indemnity
+	5.1
+
+	You warrant and represent to Last.fm that:
+	5.1.1
+	You have the authority to enter into this Agreement on Your own behalf or on behalf of any company or other legal entity by which You are employed and that wishes to use the Last.fm Data;
+	5.1.2
+	You will comply with all local and international laws and regulations, including, all applicable intellectual property and data protection laws in connection with Your use and storage of the Last.fm Data;
+	5.1.3
+	You will obtain and maintain any and all necessary licences and permissions in connection with Your use of the Last.fm Data;
+	5.1.4
+	Your use of the Last.fm Data will not violate or infringe the rights of any third party, including intellectual property rights or rights of privacy;
+	5.1.5
+	You will not use the Last.fm Data for any purpose that is fraudulent, misleading or illegal or otherwise than is permitted by this Agreement;
+	5.1.6
+	You will not use the Last.fm Data for any purpose to enable You to personally identify or contact any User;
+	5.1.7
+	You will not use the Last.fm Data in any way that is libellous or defamatory of third parties, or is obscene, malicious or discriminatory in any way, including but not limited to race, disability, sex, sexual orientation or religion;
+	5.1.8
+	You will not use the Last.fm Data in any way or on any website that is associated or promotes, encourages, facilitates or condones the illegal or unauthorised use or sharing of content. You will not use any audio, audiovisual, images and/or artwork, whether or not accessible through the API, and all such content is expressly excluded from this Agreement;
+	5.1.9
+	You will not interfere or attempt to interfere with the operation or running of the Last.fm Site with any virus, worm, Trojan horse, adware, spyware or any other form of malicious code or software; and
+	5.1.10
+	You will at all times comply with the terms of this Agreement and any other terms or policies referenced in this Agreement or on the Last.fm Site.
+	5.2
+
+	You will not bring any claim against Last.fm, or any of its licensees, assigns or successors, for damages, liabilities, causes of action, judgments, or claims in respect of Your access, retrieval and/or use of the Last.fm Data or any intellectual property You develop that is based on may otherwise arise out of Your use of, reliance on, or reference to the Last.fm Site or Last.fm Data.
+	5.3
+
+	You will indemnify, and keep Last.fm, its affiliates, licensees, assigns, successors, customers, Users, all third-party advertisers, technology providers and service providers, and each of their respective employees, directors and representatives (each an "Indemnified Party"), fully and effectively indemnified from and against any and all liabilities, costs, expenses, damages and losses (including any direct, indirect or consequential losses, loss of profit, loss of reputation and all reasonable professional costs and expenses), suffered or incurred by an Indemnified Party arising out of or in connection with any claims, actions or proceedings ("Claims") which arise out of or are related to: (i) Your access, retrieval and use of the Last.fm Data; (ii) any breach of the warranties contained in Clause 5; and (iii) Your violation of any term or condition of this Agreement (including the Last.fm Site Terms of Use and Last.fm Privacy Policy attached). At Last.fm's option, You will assume control of the defence of any Claim and all related settlement negotiations, except that Last.fm shall be entitled to take any action which Last.fm (acting reasonably) deems necessary where You have failed to take action or materially delay taking action in defending or settling a Claim and such failure or delay may, in the opinion of Last.fm, prejudice the interests of Last.fm. In any event, You may not settle any Claim without Last.fm's prior written consent.
+	6. Limitation of Liability
+	6.1
+
+	Nothing in this agreement shall limit Last.fm's liability for death or personal injury caused by the negligence of Last.fm or its officers, employees or agents or for fraudulent misrepresentations or fraud, or any other liability that cannot be limited or excluded by applicable law.
+	6.2
+
+	Last.fm gives no warranties of any kind, whether express, implied, statutory or otherwise, to the fullest extent permitted by law, including warranties of satisfactory quality, fitness for purpose and non infringement in relation to the last.fm site or the last.fm data.
+	6.3
+
+	To the extent permitted by applicable law, you acknowledge and agree that you use the last.fm site and the last.fm data at your own risk. the last.fm data and the last.fm site is made available on an "as is" basis and last.fm shall not be liable for the unavailability of the last.fm data or the last.fm site or any fault, defect or error in the last.fm data.
+	6.4
+	To the extent permitted by applicable law, last.fm shall not be liable to you for any losses of any kind arising under or in relation to your use of the last.fm site or last.fm data, including but not limited to (i) any loss of profits, business, contracts, anticipated savings, goodwill, or revenue; or (ii) any loss or corruption of data; or (iii) consequential loss or damage whatsoever, whether or not such losses or damages arise directly or indirectly and even if either party was aware of the possibility of such loss or damage.
+	7. Licence to use Last.fm trade marks
+	7.1
+
+	Subject to the prior written approval of Last.fm in each case, Last.fm may make available to You certain trade marks, logos or graphics ("Marks") for use in conjunction with Your use of the Last.fm Data. You must comply with the Last.fm Brand Guidelines that can be downloaded from http://www.last.fm/resources/. Your use of the Marks in accordance with in accordance with this Agreement is conditional upon You not using any of the Marks: (i) to represent that Last.fm endorses, sponsors or is connected to Your use of the Last.fm Data, other than to inform third parties that the Last.fm Data originated from Last.fm; or (ii) in any way that is derogatory to or critical of Last.fm or any officer, director, agent, employee, affiliate, parent or subsidiary of Last.fm.
+	7.2
+
+	Last.fm is the worldwide owner of the Marks (whether registered or unregistered) and retains all right, title and interest in and to the Marks. Any and all goodwill arising from Your use of the Marks shall accrue to Last.fm. You will not copy or use the Marks in any way not authorised by Last.fm in writing or this Agreement. You will abide by any and all conditions set out by Last.fm in connection with Your use of the Marks and must not challenge the validity of the Marks or attempt to register similar or trade marks, service marks or logos.
+	7.3
+
+	Last.fm reserves the right to withdraw its consent for You to use the Marks at any time. Upon withdrawal of consent, You shall immediately discontinue Your use of the Marks.
+	8. Publicity
+	8.1
+
+	Last.fm may, at any time in its sole discretion, prepare and issue press releases, statements, and promotional and other materials mentioning and/or describing Your use of the Last.fm Data and identifying You as the developer and otherwise describing the relationship between You and Last.fm.
+	8.2
+
+	You are not permitted to issue any publicity in connection with Your use of the Last.fm Data without the prior written consent of Last.fm.
+	9. Term and Termination
+	9.1
+
+	This Agreement shall continue on an ongoing basis during the Term, subject to any earlier termination pursuant to clause 9.2.
+	9.2
+
+	You may terminate this Agreement at any time by sending an email to partners@Last.fm which shall be deemed to have been given on the date that the email is read by Last.fm (evidenced by a read receipt automatically sent to You). You acknowledge and agree that Last.fm may at any time in its sole discretion, without liability and with or without cause terminate this Agreement and/or terminate, restrict, block, disable or suspend Your access to the Last.fm Site or the Last.fm Data or any portion or feature of any of them.
+	9.3
+
+	Upon any termination of this Agreement, You must immediately discontinue Your use of the Last.fm API and as soon as reasonably possible delete all Last.fm Data in Your possession or control. Clauses 2.3, 2.4, 2.5, 2.6, 4.2.2, 5, 6, 7, 8 and 10 and any definitions that are necessary to give effect to such Clauses will survive any termination of Your use of the Last.fm Site or Last.fm Data and will continue to bind You and Last.fm in accordance with this Agreement.
+	10. General
+	10.1
+
+	Last.fm reserves its right to amend this Agreement or any other document referenced in this Agreement at any time in its sole discretion by sending a new or amended version of this Agreement to You by email and by posting new or updated Last.fm Site Terms of Use and/or the Privacy Policy on the Last.fm Site.
+	10.2
+
+	Nothing in this Agreement shall be construed as constituting a partnership, joint venture or relationship of employer and employee between the parties.
+	10.3
+
+	This Agreement (and any other document incorporated into this Agreement by reference) sets out the entire agreement and understanding between You and Last.fm and supersedes all previous agreements, representations and arrangements between You and Last.fm (either oral or written). Nothing in this Clause shall limit or exclude any liability for fraudulent misrepresentation.
+	10.4
+
+	This Agreement will be binding upon and inure to the benefit of the parties and their respective successors and assigns.
+	10.5
+
+	Each of Last.fm's affiliates are express and intended third party beneficiaries of this Agreement and may enforce any of its terms and exercise any of the rights to the same extent as Last.fm.
+	10.6
+
+	Third party advertisers, technology providers and service providers are express and intended third-party beneficiaries of Clause 4.3 and are entitled to directly enforce their rights hereunder.
+	10.7
+
+	This Agreement shall be governed by the laws of England and the parties agree to submit to the exclusive jurisdiction of the Courts of England.
+	10.8
+
+	Except as set out at Clauses 10.6 and 10.7 above, nothing in this Agreement is intended to confer on any third party (whether referred to in this Agreement by name, class, description or otherwise) any benefit or any right under any legislation in any country to enforce any provision of this Agreement.
+
+	THIS AGREEMENT SETS OUT THE CONDITIONS OF LAST.FM GIVING YOU ACCESS TO LAST.FM DATA ONLY. IF YOU ARE UNSURE ABOUT ANY PART OF THIS AGREEMENT, LAST.FM RECOMMENDS THAT YOU OBTAIN INDEPENDENT LEGAL ADVICE.
+
+<h3>Jaudio Tagger - JThink[<a href='javascript:show("l765")'>show</a>]</h3>
+<pre id='l765'>
+
+GNU LESSER GENERAL PUBLIC LICENSE
+
+Version 3, 29 June 2007
+
+Copyright � 2007 Free Software Foundation, Inc. {http://fsf.org/}
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below.
+0. Additional Definitions.
+
+As used herein, �this License� refers to version 3 of the GNU Lesser General Public License, and the �GNU GPL� refers to version 3 of the GNU General Public License.
+
+�The Library� refers to a covered work governed by this License, other than an Application or a Combined Work as defined below.
+
+An �Application� is any work that makes use of an interface provided by the Library, but which is not otherwise based on the Library. Defining a subclass of a class defined by the Library is deemed a mode of using an interface provided by the Library.
+
+A �Combined Work� is a work produced by combining or linking an Application with the Library. The particular version of the Library with which the Combined Work was made is also called the �Linked Version�.
+
+The �Minimal Corresponding Source� for a Combined Work means the Corresponding Source for the Combined Work, excluding any source code for portions of the Combined Work that, considered in isolation, are based on the Application, and not on the Linked Version.
+
+The �Corresponding Application Code� for a Combined Work means the object code and/or source code for the Application, including any data and utility programs needed for reproducing the Combined Work from the Application, but excluding the System Libraries of the Combined Work.
+1. Exception to Section 3 of the GNU GPL.
+
+You may convey a covered work under sections 3 and 4 of this License without being bound by section 3 of the GNU GPL.
+2. Conveying Modified Versions.
+
+If you modify a copy of the Library, and, in your modifications, a facility refers to a function or data to be supplied by an Application that uses the facility (other than as an argument passed when the facility is invoked), then you may convey a copy of the modified version:
+
+    a) under this License, provided that you make a good faith effort to ensure that, in the event an Application does not supply the function or data, the facility still operates, and performs whatever part of its purpose remains meaningful, or
+    b) under the GNU GPL, with none of the additional permissions of this License applicable to that copy.
+
+3. Object Code Incorporating Material from Library Header Files.
+
+The object code form of an Application may incorporate material from a header file that is part of the Library. You may convey such object code under terms of your choice, provided that, if the incorporated material is not limited to numerical parameters, data structure layouts and accessors, or small macros, inline functions and templates (ten or fewer lines in length), you do both of the following:
+
+    a) Give prominent notice with each copy of the object code that the Library is used in it and that the Library and its use are covered by this License.
+    b) Accompany the object code with a copy of the GNU GPL and this license document.
+
+4. Combined Works.
+
+You may convey a Combined Work under terms of your choice that, taken together, effectively do not restrict modification of the portions of the Library contained in the Combined Work and reverse engineering for debugging such modifications, if you also do each of the following:
+
+    a) Give prominent notice with each copy of the Combined Work that the Library is used in it and that the Library and its use are covered by this License.
+    b) Accompany the Combined Work with a copy of the GNU GPL and this license document.
+    c) For a Combined Work that displays copyright notices during execution, include the copyright notice for the Library among these notices, as well as a reference directing the user to the copies of the GNU GPL and this license document.
+    d) Do one of the following:
+        0) Convey the Minimal Corresponding Source under the terms of this License, and the Corresponding Application Code in a form suitable for, and under terms that permit, the user to recombine or relink the Application with a modified version of the Linked Version to produce a modified Combined Work, in the manner specified by section 6 of the GNU GPL for conveying Corresponding Source.
+        1) Use a suitable shared library mechanism for linking with the Library. A suitable mechanism is one that (a) uses at run time a copy of the Library already present on the user's computer system, and (b) will operate properly with a modified version of the Library that is interface-compatible with the Linked Version.
+    e) Provide Installation Information, but only if you would otherwise be required to provide such information under section 6 of the GNU GPL, and only to the extent that such information is necessary to install and execute a modified version of the Combined Work produced by recombining or relinking the Application with a modified version of the Linked Version. (If you use option 4d0, the Installation Information must accompany the Minimal Corresponding Source and Corresponding Application Code. If you use option 4d1, you must provide the Installation Information in the manner specified by section 6 of the GNU GPL for conveying Corresponding Source.)
+
+5. Combined Libraries.
+
+You may place library facilities that are a work based on the Library side by side in a single library together with other library facilities that are not Applications and are not covered by this License, and convey such a combined library under terms of your choice, if you do both of the following:
+
+    a) Accompany the combined library with a copy of the same work based on the Library, uncombined with any other library facilities, conveyed under the terms of this License.
+    b) Give prominent notice with the combined library that part of it is a work based on the Library, and explaining where to find the accompanying uncombined form of the same work.
+
+6. Revised Versions of the GNU Lesser General Public License.
+
+The Free Software Foundation may publish revised and/or new versions of the GNU Lesser General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Library as you received it specifies that a certain numbered version of the GNU Lesser General Public License �or any later version� applies to it, you have the option of following the terms and conditions either of that published version or of any later version published by the Free Software Foundation. If the Library as you received it does not specify a version number of the GNU Lesser General Public License, you may choose any version of the GNU Lesser General Public License ever published by the Free Software Foundation.
+
+If the Library as you received it specifies that a proxy can decide whether future versions of the GNU Lesser General Public License shall apply, that proxy's public statement of acceptance of any version is permanent authorization for you to choose that version for the Library.
+</pre>
+<h3>Piccaso [<a href='javascript:show("9y8")'>show</a>]</h3>
+<pre id='9y8'>
+Copyright 2013 Square, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre>
+<h3>Json [<a href='javascript:show("f98")'>show</a>]</h3>
+<pre id='f98'>
+Copyright (c) 2002 JSON.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+The Software shall be used for Good, not Evil.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </pre>
+<h3>Jsoup [<a href='javascript:show("o07k")'>show</a>]</h3>
+<pre id='o07k'>
+The MIT License
+
+Copyright � 2009 - 2013 Jonathan Hedley (jonathan@hedley.net)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
+<h3>Material Dialogs[<a href='javascript:show("l56")'>show</a>]</h3>
+<pre id='l56'>
+The MIT License (MIT)
+
+Copyright (c) 2015 Aidan Michael Follestad
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>
+<h3>Circle Image View (Not Ued Currently)[<a href='javascript:show("i8")'>show</a>]</h3>
+<pre id='i8'>Copyright 2014 - 2015 Henning Dodenhof
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+</pre>
+
+
+<h3>Vertical SeekBar, OpenSLMediaPlayer [<a href='javascript:show("ifsg")'>show</a>]</h3>
+<pre id='ifsg'>Copyright (C) 2015 Haruki Hasegawa
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+</pre>
+
+
+<h3>MaterialDateTimePicker [<a href='javascript:show("dfdf")'>show</a>]</h3>
+<pre id='dfdf'>
+Copyright (c) 2015 Wouter Dullaert
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre>
+
+
+<h3>Material Dialogs [<a href='javascript:show("rttr")'>show</a>]</h3>
+<pre id='rttr'>
+The MIT License (MIT)
+
+Copyright (c) 2014-2016 Aidan Michael Follestad
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>
+
+<h3>Picasso [<a href='javascript:show("ert")'>show</a>]</h3>
+<pre id='ert'>
+
+
+
+Copyright 2013 Square, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre>
+
+
+<h3>JaudioTagger [<a href='javascript:show("sdfsf")'>show</a>]</h3>
+<pre id='sdfsf'>
+    GNU LESSER GENERAL PUBLIC LICENSE
+
+Version 3, 29 June 2007
+
+Copyright © 2007 Free Software Foundation, Inc.
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below.
+
+0. Additional Definitions.
+
+As used herein, “this License” refers to version 3 of the GNU Lesser General Public License, and the “GNU GPL” refers to version 3 of the GNU General Public License.
+
+“The Library” refers to a covered work governed by this License, other than an Application or a Combined Work as defined below.
+
+An “Application” is any work that makes use of an interface provided by the Library, but which is not otherwise based on the Library. Defining a subclass of a class defined by the Library is deemed a mode of using an interface provided by the Library.
+
+A “Combined Work” is a work produced by combining or linking an Application with the Library. The particular version of the Library with which the Combined Work was made is also called the “Linked Version”.
+
+The “Minimal Corresponding Source” for a Combined Work means the Corresponding Source for the Combined Work, excluding any source code for portions of the Combined Work that, considered in isolation, are based on the Application, and not on the Linked Version.
+
+The “Corresponding Application Code” for a Combined Work means the object code and/or source code for the Application, including any data and utility programs needed for reproducing the Combined Work from the Application, but excluding the System Libraries of the Combined Work.
+
+1. Exception to Section 3 of the GNU GPL.
+
+You may convey a covered work under sections 3 and 4 of this License without being bound by section 3 of the GNU GPL.
+
+2. Conveying Modified Versions.
+
+If you modify a copy of the Library, and, in your modifications, a facility refers to a function or data to be supplied by an Application that uses the facility (other than as an argument passed when the facility is invoked), then you may convey a copy of the modified version:
+
+a) under this License, provided that you make a good faith effort to ensure that, in the event an Application does not supply the function or data, the facility still operates, and performs whatever part of its purpose remains meaningful, or
+b) under the GNU GPL, with none of the additional permissions of this License applicable to that copy.
+3. Object Code Incorporating Material from Library Header Files.
+
+The object code form of an Application may incorporate material from a header file that is part of the Library. You may convey such object code under terms of your choice, provided that, if the incorporated material is not limited to numerical parameters, data structure layouts and accessors, or small macros, inline functions and templates (ten or fewer lines in length), you do both of the following:
+
+a) Give prominent notice with each copy of the object code that the Library is used in it and that the Library and its use are covered by this License.
+b) Accompany the object code with a copy of the GNU GPL and this license document.
+4. Combined Works.
+
+You may convey a Combined Work under terms of your choice that, taken together, effectively do not restrict modification of the portions of the Library contained in the Combined Work and reverse engineering for debugging such modifications, if you also do each of the following:
+
+a) Give prominent notice with each copy of the Combined Work that the Library is used in it and that the Library and its use are covered by this License.
+b) Accompany the Combined Work with a copy of the GNU GPL and this license document.
+c) For a Combined Work that displays copyright notices during execution, include the copyright notice for the Library among these notices, as well as a reference directing the user to the copies of the GNU GPL and this license document.
+d) Do one of the following:
+0) Convey the Minimal Corresponding Source under the terms of this License, and the Corresponding Application Code in a form suitable for, and under terms that permit, the user to recombine or relink the Application with a modified version of the Linked Version to produce a modified Combined Work, in the manner specified by section 6 of the GNU GPL for conveying Corresponding Source.
+1) Use a suitable shared library mechanism for linking with the Library. A suitable mechanism is one that (a) uses at run time a copy of the Library already present on the user's computer system, and (b) will operate properly with a modified version of the Library that is interface-compatible with the Linked Version.
+e) Provide Installation Information, but only if you would otherwise be required to provide such information under section 6 of the GNU GPL, and only to the extent that such information is necessary to install and execute a modified version of the Combined Work produced by recombining or relinking the Application with a modified version of the Linked Version. (If you use option 4d0, the Installation Information must accompany the Minimal Corresponding Source and Corresponding Application Code. If you use option 4d1, you must provide the Installation Information in the manner specified by section 6 of the GNU GPL for conveying Corresponding Source.)
+5. Combined Libraries.
+
+You may place library facilities that are a work based on the Library side by side in a single library together with other library facilities that are not Applications and are not covered by this License, and convey such a combined library under terms of your choice, if you do both of the following:
+
+a) Accompany the combined library with a copy of the same work based on the Library, uncombined with any other library facilities, conveyed under the terms of this License.
+b) Give prominent notice with the combined library that part of it is a work based on the Library, and explaining where to find the accompanying uncombined form of the same work.
+6. Revised Versions of the GNU Lesser General Public License.
+
+The Free Software Foundation may publish revised and/or new versions of the GNU Lesser General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Library as you received it specifies that a certain numbered version of the GNU Lesser General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that published version or of any later version published by the Free Software Foundation. If the Library as you received it does not specify a version number of the GNU Lesser General Public License, you may choose any version of the GNU Lesser General Public License ever published by the Free Software Foundation.
+
+If the Library as you received it specifies that a proxy can decide whether future versions of the GNU Lesser General Public License shall apply, that proxy's public statement of acceptance of any version is permanent authorization for you to choose that version for the Library.
+</pre>
+</body>
+
+<script>
+	var query = decodeURIComponent(window.location.search.substring(1));
+	var color = query.match(/^#..(.+)/);
+	if (color != null) {
+		// android gives us aRGB, but we need RGB
+		color = '#' + color[1];
+		document.body.style.color = color;
+	}
+
+
+
+
+
+
+
+</script>
+
+</html>
+
+
+

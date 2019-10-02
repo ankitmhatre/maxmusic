@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[maxmusic-1.en-strings]
+file_filter = translations/maxmusic-1.en-strings/<lang>.xml
+source_lang = en
+type = ANDROID
+

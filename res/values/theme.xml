@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010 Christopher Eby <kreed@kreed.org>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<resources>
+	<!-- styles -->
+	<style name="Universal.PlaybackActionBar" parent="android:Widget.Holo.ActionBar">
+		<item name="android:displayOptions">showTitle|homeAsUp</item>
+	</style>
+
+	<style name="AudioFileInfoOverlayText">
+		<item name="android:paddingLeft">4px</item>
+		<item name="android:paddingBottom">4px</item>
+		<item name="android:textColor">#ffffffff</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:shadowColor">#000000</item>
+		<item name="android:shadowDx">1</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:focusable">true</item>
+	</style>
+
+	<style name="ToolbarBackground">
+		<item name="android:background">#222233</item>
+	</style>
+
+	<style name="ChooseContactBackground">
+		<item name="android:background">#cc9933</item>
+	</style>
+
+	<style name="VerticalDividerForList">
+		<item name="android:layout_width">1px</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:layout_marginLeft">4px</item>
+		<item name="android:background">#444444</item>
+	</style>
+
+	<style name="VerticalDividerLeft">
+		<item name="android:layout_width">1px</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:layout_marginLeft">4px</item>
+		<item name="android:background">#666677</item>
+	</style>
+	<style name="VerticalDividerRight">
+		<item name="android:layout_width">1px</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:layout_marginRight">4px</item>
+		<item name="android:background">#000022</item>
+	</style>
+
+	<style name="HorizontalDividerTop">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">1px</item>
+		<item name="android:background">#666677</item>
+	</style>
+	<style name="HorizontalDividerBottom">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">1px</item>
+		<item name="android:background">#000022</item>
+	</style>
+
+</resources>

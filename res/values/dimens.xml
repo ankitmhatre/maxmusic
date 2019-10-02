@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<dimen name="cover_size">56dp</dimen>
+	<dimen name="cover_padding">10sp</dimen>
+	<dimen name="pmark_size">4sp</dimen>
+	<dimen name="cover_padding_with_pmark">8sp</dimen>
+	<dimen name="text_padding">10sp</dimen>
+	<dimen name="row_normal_height">56sp</dimen>
+	<dimen name="title_portrait">22sp</dimen>
+	<dimen name="artist_portrait">16sp</dimen>
+	<dimen name="album_portrait">16sp</dimen>
+	<dimen name="time">13sp</dimen>
+	<dimen name="vsbpassing">10dp</dimen>
+	<dimen name="pause_bar_distance">6dp</dimen>
+	<dimen name="pause_bar_height">18dp</dimen>
+	<dimen name="pause_bar_width">6dp</dimen>
+	<dimen name="flatblayout">5dp</dimen>
+
+	<dimen name="dots_height">30dp</dimen>
+	<dimen name="dots_margin_bottom">20dp</dimen>
+	<dimen name="img_width_height">150dp</dimen>
+	<dimen name="slide_title">30dp</dimen>
+	<dimen name="slide_desc">16dp</dimen>
+	<dimen name="desc_padding">40dp</dimen>
+<dimen name="toggle_right_padding">5dp</dimen>
+<dimen name="vericalBarPadding">10dp</dimen>
+
+	<!-- <dimen name="navigation_drawer_list_item_min_height">?android:attr/listPreferredItemHeightSmall</dimen> -->
+
+</resources>

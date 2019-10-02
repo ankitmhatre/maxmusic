@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Copyright (C) 2012 Christopher Eby <kreed@kreed.org>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:maxmusic="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.dragonide.maxmusic.CoverView
+        android:id="@+id/cover_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+
+    <TableLayout
+        android:id="@+id/info_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#00000000"
+        android:collapseColumns="0"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:shrinkColumns="1"
+        android:stretchColumns="1">
+
+
+    </TableLayout>
+
+
+    <com.dragonide.maxmusic.SlidingView
+        android:id="@+id/sliding_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|left"
+        android:layout_marginTop="0dip"
+        android:orientation="horizontal"
+        maxmusic:slider_handle_id="@+id/queue_slider">
+
+
+        <LinearLayout
+            android:id="@+id/queue_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:elevation="2dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#26000000"
+                android:collapseColumns="3"
+                android:orientation="vertical"
+                android:paddingLeft="5dip"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dip"
+                android:paddingRight="5dip"
+
+                android:stretchColumns="1">
+
+                <TableRow>
+
+
+                    <TextView
+
+                        android:id="@+id/title"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_span="2"
+                        android:ellipsize="marquee"
+                        android:fontFamily="sans-serif-thin"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/title_portrait"
+                        android:textStyle="bold" />
+
+                    <!--    <TextView
+                           android:id="@+id/queue_pos"
+                           android:layout_gravity="top"
+                           android:gravity="right"
+                           android:singleLine="true" />
+                           -->
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+                        android:id="@+id/artist"
+                        android:layout_gravity="center"
+                        android:layout_span="2"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-thin"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/artist_portrait"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+
+                    <TextView
+                        android:id="@+id/album"
+                        android:layout_gravity="center"
+                        android:layout_span="2"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-thin"
+                        android:singleLine="true"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="@dimen/album_portrait"
+                        android:textStyle="bold" />
+                </TableRow>
+
+
+            </TableLayout>
+            <LinearLayout
+                android:id="@+id/controls_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/elapsed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/time"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:maxHeight="32dip"
+                    android:minHeight="32dip"
+                    android:paddingLeft="18dip"
+                    android:paddingRight="18dip" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/time"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="95dp"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/controls_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/queue"
+            class="com.dragonide.maxmusic.ShowQueueFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </com.dragonide.maxmusic.SlidingView>
+
+
+</RelativeLayout>
+

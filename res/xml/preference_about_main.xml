@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <com.dragonide.maxmusic.Pref_Category
+        android:key="devpref"
+        android:title="Team" >
+        <Preference
+            android:key="ankitmhatre"
+            android:shouldDisableView="true"
+            android:summary="Tap to check out"
+            android:title="Ankit Mhatre" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://plus.google.com/+AnkitMhatreOrAnku" />
+        </Preference>
+    </com.dragonide.maxmusic.Pref_Category>
+
+        <Preference
+            android:key="siddheshpansare"
+            android:shouldDisableView="true"
+            android:summary="Tap to check out"
+            android:title="Siddhesh Pansare" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://plus.google.com/106273746181155007294" />
+        </Preference>
+    <Preference
+        android:key="abhisavaliya"
+        android:shouldDisableView="true"
+        android:summary="Tap to check out"
+        android:title="Abhi Savaliya" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://plus.google.com/106812061180517691043" />
+    </Preference>
+
+
+
+    <com.dragonide.maxmusic.Pref_Category
+        android:key="licenseandchangelog"
+        android:title="Information" >
+ <Preference
+            android:key="changelog"
+            android:shouldDisableView="true"
+            android:summary="v3.51"
+            android:title="ChangeLog"
+          />
+      <Preference
+          android:key="privacy"
+          android:title="Privacy Policy">
+
+      </Preference>
+  <!--    <Preference
+          android:key="faqs"
+          android:title="FAQ's">
+
+      </Preference>-->
+
+       </com.dragonide.maxmusic.Pref_Category>
+</PreferenceScreen>

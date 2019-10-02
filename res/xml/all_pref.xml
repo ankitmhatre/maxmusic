@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:maxmusic="http://schemas.android.com/apk/res-auto">
+    <com.dragonide.maxmusic.Pref_Category
+        android:key="category_foo"
+        android:title="@string/theme_title">
+        <com.dragonide.maxmusic.ListPreferenceSummary
+            android:defaultValue="2"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:key="theme_int"
+            android:title="@string/theme_title" />
+
+
+        <com.dragonide.maxmusic.ColorPref
+            android:key="primary_color_int"
+            android:summary="@string/color_summary_primary"
+            android:title="@string/color_primary" />
+        <com.dragonide.maxmusic.ColorPref
+            android:key="accent_color_int"
+            android:summary="@string/color_summary_accent"
+            android:title="@string/color_accent" />
+        <com.dragonide.maxmusic.ExtendedCheckBoxPref
+            android:defaultValue="false"
+            android:key="tint_navigation"
+            android:summary="@string/tint_nav_summary"
+            android:title="@string/tint_nav_title" />
+    </com.dragonide.maxmusic.Pref_Category>
+    <com.dragonide.maxmusic.Pref_Category android:title="@string/settings">
+
+        <PreferenceScreen
+            android:key="audio_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/audio">
+
+            <PreferenceScreen
+                android:fragment="com.dragonide.maxmusic.PreferencesActivity$ReplayGainFragment"
+                android:key="replay_frag"
+                android:summary="@string/replaygain_summary"
+                android:title="@string/replaygain" />
+            <com.dragonide.maxmusic.SeekBarPreference
+                android:defaultValue="50"
+                android:dialogLayout="@layout/seekbar_pref"
+                android:key="volume_during_ducking"
+                android:title="@string/volume_during_ducking_title"
+                maxmusic:sbpCheckBoxKey="ignore_audiofocus_loss"
+                maxmusic:sbpCheckBoxText="@string/ignore_audiofocus_loss_summary"
+                maxmusic:sbpMaxValue="100"
+                maxmusic:sbpSummaryFormat="%s %.0f%%"
+                maxmusic:sbpSummaryText="@string/volume_during_ducking_summary" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="media_button"
+                android:summary="@string/media_button_summary"
+                android:title="@string/media_button_title" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="media_button_beep"
+                android:summary="@string/media_button_beep_summary"
+                android:title="@string/media_button_beep_title" />
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="headset_only"
+                android:summary="@string/headset_only_summary"
+                android:title="@string/headset_only_title" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="headset_pause"
+                android:summary="@string/headset_pause_summary"
+                android:title="@string/headset_pause_title" />
+            <PreferenceScreen
+                android:fragment="com.dragonide.maxmusic.PreferencesActivity$HeadsetLaunchFragment"
+                android:key="headset_launch"
+                android:summary="@string/headset_launch_summary"
+                android:title="@string/headset_launch_title" />
+        </PreferenceScreen>
+
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            android:key="playback_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/playback_screen">
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="false"
+                android:key="playback_on_startup"
+                android:summary="@string/playback_on_startup_summary"
+                android:title="@string/playback_on_startup_title" />
+
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="Nothing"
+                android:entries="@array/swipe_action_entries"
+                android:entryValues="@array/swipe_action_values"
+                android:key="swipe_up_action"
+                android:title="@string/swipe_up_action_title" />
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="Nothing"
+                android:entries="@array/swipe_action_entries"
+                android:entryValues="@array/swipe_action_values"
+                android:key="swipe_down_action"
+                android:title="@string/swipe_down_action_title" />
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="Nothing"
+                android:entries="@array/swipe_action_entries"
+                android:entryValues="@array/swipe_action_values"
+                android:key="cover_press_action"
+                android:title="@string/cover_press_action_title" />
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="AlbumArt"
+                android:entries="@array/swipe_action_entries_long"
+                android:entryValues="@array/swipe_action_values_long"
+                android:key="cover_longpress_action"
+                android:title="@string/cover_longpress_action_title" />
+        </PreferenceScreen>
+
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            android:key="library_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/library_screen">
+            <PreferenceScreen
+                android:summary="@string/customize_tab_order"
+                android:title="@string/tabs">
+                <intent
+                    android:targetClass="com.dragonide.maxmusic.TabOrderActivity"
+                    android:targetPackage="com.dragonide.maxmusic" />
+            </PreferenceScreen>
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="6"
+                android:entries="@array/default_action_entries"
+                android:entryValues="@array/default_action_entry_values"
+                android:key="default_action_int"
+                android:title="@string/default_action_title" />
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="0"
+                android:entries="@array/default_playlist_action_entries"
+                android:entryValues="@array/default_playlist_action_entry_values"
+                android:key="default_playlist_action"
+                android:title="@string/default_playlist_action_title" />
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="enable_scroll_to_song"
+                android:summary="@string/enable_scroll_to_song_summary"
+                android:title="@string/enable_scroll_to_song_title" />
+
+
+            <PreferenceScreen
+                android:summary="@string/customize_filebrowser_start"
+                android:title="@string/filebrowser_start">
+                <intent
+                    android:targetClass="com.dragonide.maxmusic.FilebrowserStartActivity"
+                    android:targetPackage="com.dragonide.maxmusic" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            android:key="notification_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/notifications">
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="1"
+                android:entries="@array/notification_mode_entries"
+                android:entryValues="@array/entry_values"
+                android:key="notification_mode"
+                android:title="@string/notification_mode_title" />
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="0"
+                android:entries="@array/notification_action_entries"
+                android:entryValues="@array/entry_values"
+                android:key="notification_action"
+                android:title="@string/notification_action_title" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="false"
+                android:key="notification_nag"
+                android:summary="@string/notification_nag_summary"
+                android:title="@string/notification_nag" />
+        </PreferenceScreen>
+
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:maxmusic="http://schemas.android.com/apk/res-auto"
+            android:key="shake_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/accelerometer_shake">
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="false"
+                android:key="enable_shake"
+                android:summary="@string/enable_shake_summary"
+                android:title="@string/enable_shake_title" />
+            <com.dragonide.maxmusic.ListPreferenceSummary
+                android:defaultValue="NextSong"
+                android:dependency="enable_shake"
+                android:entries="@array/swipe_action_entries"
+                android:entryValues="@array/swipe_action_values"
+                android:key="shake_action"
+                android:title="@string/shake_action_title" />
+            <!-- Might be nice to show something indicating the current shake force for this preference. -->
+            <com.dragonide.maxmusic.SeekBarPreference
+                android:defaultValue="80"
+                android:dependency="enable_shake"
+                android:dialogLayout="@layout/seekbar_pref"
+                android:key="shake_threshold"
+                android:negativeButtonText="@null"
+                android:title="@string/shake_threshold_title"
+                maxmusic:sbpMaxValue="300"
+                maxmusic:sbpSummaryValueMultiplication="0.1" />
+        </PreferenceScreen>
+
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            android:key="cover_art_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/cover_art">
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="true"
+                android:key="coverloader_vanilla"
+                android:summary="@string/coverloader_vanilla_summary"
+                android:title="@string/coverloader_vanilla_title" />
+
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="true"
+                android:key="coverloader_shadow"
+                android:summary="@string/coverloader_shadow_summary"
+                android:title="@string/coverloader_shadow_title" />
+
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="true"
+                android:key="coverloader_android"
+                android:summary="@string/coverloader_android_summary"
+                android:title="@string/coverloader_android_title" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="true"
+                android:key="cover_on_lockscreen"
+                android:summary="@string/cover_on_lockscreen_summary"
+                android:title="@string/cover_on_lockscreen_title" />
+        </PreferenceScreen>
+
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:maxmusic="http://schemas.android.com/apk/res-auto"
+            android:key="misc_frag"
+            android:persistent="true"
+            android:shouldDisableView="true"
+            android:title="@string/misc_features">
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+                android:defaultValue="false"
+                android:key="disable_lockscreen"
+                android:summary="@string/disable_lockscreen_summary"
+                android:title="@string/disable_lockscreen_title" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="false"
+                android:key="use_idle_timeout"
+                android:summary="@string/use_idle_timeout_summary"
+                android:title="@string/use_idle_timeout_title" />
+            <com.dragonide.maxmusic.IdlePreference
+                android:dependency="use_idle_timeout"
+                android:dialogLayout="@layout/seekbar_pref"
+                android:key="idle_timeout"
+                android:title="@string/idle_timeout_title" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+                android:defaultValue="false"
+                android:key="double_tap"
+                android:summary="@string/double_tap_summary"
+                android:title="@string/double_tap_title" />
+            <com.dragonide.maxmusic.SeekBarPreference
+                android:defaultValue="0"
+                android:dialogLayout="@layout/seekbar_pref"
+                android:key="playcounts_autoplaylist"
+                android:negativeButtonText="@null"
+                android:title="@string/autoplaylist_playcounts_title"
+                maxmusic:sbpMaxValue="100"
+                maxmusic:sbpSteps="25"
+                maxmusic:sbpSummaryFormat="@string/autoplaylist_playcounts_fmt"
+                maxmusic:sbpSummaryText="@string/autoplaylist_playcounts_summary"
+                maxmusic:sbpSummaryZeroText="@string/autoplaylist_playcounts_disabled" />
+            <Preference
+                android:fragment="com.dragonide.maxmusic.SDScannerFragment"
+                android:key="scanner"
+                android:title="@string/sdscanner" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="true"
+                android:key="scrobble"
+                android:summary="@string/scrobble_summary"
+                android:title="@string/scrobble_title" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="false"
+                android:key="stock_broadcast"
+                android:summary="@string/stock_broadcast_summary"
+                android:title="@string/stock_broadcast_title" />
+            <com.dragonide.maxmusic.ExtendedCheckBoxPref
+
+                android:defaultValue="false"
+                android:key="enable_readahead"
+                android:summary="@string/readahead_summary"
+                android:title="@string/readahead" />
+        </PreferenceScreen>
+
+
+        <Preference
+            android:fragment="com.dragonide.maxmusic.PreferencesActivity$AboutFragment"
+            android:key="about_frag"
+            android:title="@string/about" />
+
+        <Preference
+            android:fragment="com.dragonide.maxmusic.PreferencesActivity$AboutFragmenter"
+            android:key="about_license_frag"
+            android:title="@string/licenseAndlibrary" />
+    </com.dragonide.maxmusic.Pref_Category>
+</PreferenceScreen>
