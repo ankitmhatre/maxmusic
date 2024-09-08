@@ -3,6 +3,11 @@
 
 MaxMusic is a powerful and lightweight music player for Android that offers advanced controls, extensive customization, and a superior listening experience. It is completely ad-free and packed with features designed for music lovers who value both functionality and aesthetics.
 
+
+## screenshots
+
+<img src="./images/1.webp" alt="Screenshot 1" width="200"/>  <img src="./images/2.webp" alt="Screenshot 2" width="200"/>  <img src="./images/3.webp" alt="Screenshot 3" width="200"/>   <img src="./images/ss1.webp" alt="Screenshot 5" width="200"/>  <img src="./images/ss2.webp" alt="Screenshot 6" width="200"/>  <img src="./images/ss3.webp" alt="Screenshot 7" width="200"/>
+
 ## Features
 
 - **Ample theming customizations**  
